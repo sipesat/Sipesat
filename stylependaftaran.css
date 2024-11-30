@@ -1,0 +1,276 @@
+/* Reset margin dan padding default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style untuk seluruh body */
+body {
+    font-family: Arial, sans-serif;
+    background: url('../BG1.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    overflow-y: auto;
+}
+
+/* Efek blur */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+/* Header */
+header {
+    background-color: rgba(26, 35, 126, 0.8); /* Transparan */
+    color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main content */
+main {
+    background-color: rgba(255, 255, 255, 0.9); /* Transparan */
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+main h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+main p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Form */
+.form-seminar {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(249, 249, 249, 0.9); /* Transparan */
+}
+
+.form-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #1a237e;
+}
+
+.form-seminar label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-seminar input[type="text"],
+.form-seminar input[type="email"],
+.form-seminar input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-seminar input[type="submit"] {
+    background-color: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-seminar input[type="submit"]:hover {
+    background-color: #3949ab;
+}
+
+/* Radio groups */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.radio-group label {
+    margin-bottom: 5px;
+}
+
+/* Pembimbing group */
+.pembimbing-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.pembimbing-group input[type="radio"] {
+    margin-right: 10px;
+}
+
+#inputPembimbingLain {
+    margin-top: 10px;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-group small {
+    font-size: 12px;
+    color: #777;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Required field indicator */
+.required {
+    color: red;
+}
+
+/* Styling Select Element */
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    border-color: #091057;
+    box-shadow: 0 0 5px rgba(9, 16, 87, 0.5);
+    outline: none;
+}
+
+/* Styling Input Date */
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input[type="date"]:focus {
+    border-color: #091057;
+    box-shadow: 0 0 5px rgba(9, 16, 87, 0.5);
+    outline: none;
+}
+
+/* Adding Hover Effect */
+select:hover, input[type="date"]:hover {
+    border-color: #0056b3;
+}
+
+/* Tombol beranda */
+.btn-beranda {
+    background-color: #f4f4f4;
+    color: #1a237e;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.btn-beranda:hover {
+    background-color: #e0e0e0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(26, 35, 126, 0.8); /* Transparan */
+    color: white;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+
+    .form-section {
+        padding: 15px;
+        margin-bottom: 20px; /* Jarak antar form-section */
+        text-align: left; /* Menyelaraskan teks ke kiri */
+    }
+
+    .form-section h2 {
+        font-size: 1.2rem; /* Sesuaikan ukuran teks */
+        margin-bottom: 10px; /* Jarak judul dengan input */
+    }
+
+    .form-section label {
+        display: block; /* Label berada di atas input */
+        font-size: 0.9rem; /* Perkecil sedikit ukuran label */
+        margin-bottom: 5px; /* Jarak label dengan input */
+    }
+
+    .form-section select,
+    .form-section input[type="date"] {
+        width: 100%; /* Isi lebar penuh layar kecil */
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box; /* Hindari overflow */
+    }
+
+    .form-section input[type="date"] {
+        appearance: none; /* Sesuaikan tampilan input tanggal */
+        background-color: #f9f9f9;
+    }
+}

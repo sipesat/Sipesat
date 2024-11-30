@@ -1,0 +1,233 @@
+/* Gaya Umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    /* Background Image dengan Efek Blur */
+    background: url('../BG1.png') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(10px); /* Efek blur */
+}
+
+/* Overlay Gelap untuk Kontras */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Lapisan semi-transparan */
+    z-index: -1;
+}
+
+/* Header */
+header {
+    background-color: #091057;
+    color: white;
+    text-align: center;
+    font-size: 20px; /* Mengurangi ukuran font */
+    font-weight: bold;
+    padding: 10px 20px; /* Mengurangi padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Menambahkan jarak bawah */
+}
+
+/* Main Konten */
+main {
+    padding: 30px;
+    flex-grow: 1;
+    margin: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1; /* Agar di atas overlay */
+}
+
+/* Footer */
+footer {
+    background-color: #091057;
+    color: white;
+    text-align: center;
+    padding: 10px 20px; /* Mengurangi padding */
+    margin-top: auto;
+}
+
+/* Kontainer Tabel */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Menambahkan scrolling horizontal */
+    display: block; /* Agar scrolling horizontal dapat berfungsi */
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    word-wrap: break-word; /* Bungkus teks */
+}
+
+table th {
+    background-color: #091057;
+    color: white;
+    white-space: nowrap; /* Hindari memotong teks header */
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #e0f0ff;
+}
+
+table a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+/* Tombol Kembali */
+.btn-back {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #091057;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #005bb5;
+    transform: translateY(-2px);
+}
+
+.btn-back:active {
+    background-color: #004099;
+    transform: translateY(1px);
+}
+
+/* Tombol Input Nilai */
+.btn-input-nilai {
+    text-decoration: none;
+    padding: 8px 18px;
+    background-color: #005bb5; /* Warna biru untuk tombol input nilai */
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-input-nilai:hover {
+    background-color:#004099; /* Warna biru gelap saat hover */
+    transform: translateY(-2px);
+}
+
+.btn-input-nilai:active {
+    background-color: #004099; /* Warna biru lebih gelap saat klik */
+    transform: translateY(1px);
+}
+
+/* Form Styling untuk Halaman Input Nilai */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input, form select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+form input:focus, form select:focus {
+    border-color: #0073e6;
+    background-color: #eaf4ff;
+    outline: none;
+}
+
+/* Tombol Submit untuk Halaman Input Nilai */
+button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #005bb5;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color:#004099;
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+    background-color: #004099;
+    transform: translateY(1px);
+}
+
+/* Responsif untuk Tabel */
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto; /* Scroll horizontal */
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 14px; /* Kurangi ukuran font untuk perangkat kecil */
+    }
+
+    form input, form select, button[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Styling untuk h1 (Penilaian Seminar) */
+h1 {
+    font-size: 26px; /* Menyesuaikan ukuran font */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px; /* Memberikan ruang antara judul dan konten */
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Menambahkan efek shadow ringan */
+}

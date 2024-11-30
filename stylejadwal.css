@@ -1,0 +1,92 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 1rem;
+    text-align: left;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+main {
+    margin: 2rem auto;
+    width: 80%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    table-layout: fixed; /* Mengatur agar tabel lebih fleksibel */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: center;
+    word-wrap: break-word; /* Memastikan teks tidak keluar dari kotak */
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+a:hover {
+    color: #d4d4d4;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    main {
+        width: 95%; /* Lebih sempit untuk layar kecil */
+    }
+
+    header {
+        text-align: center; /* Header rata tengah pada layar kecil */
+    }
+
+    header a {
+        font-size: 1rem; /* Font header lebih kecil */
+    }
+
+    table {
+        width: 100%; /* Pastikan tabel mengisi seluruh layar kecil */
+        display: block; /* Membuat tabel bergulir secara horizontal */
+        overflow-x: auto;
+        white-space: nowrap; /* Mencegah teks memaksa turun ke bawah */
+    }
+
+    th, td {
+        font-size: 0.9rem; /* Mengurangi ukuran teks untuk layar kecil */
+        padding: 0.5rem; /* Padding lebih kecil */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Ukuran heading lebih kecil di layar kecil */
+    }
+}
